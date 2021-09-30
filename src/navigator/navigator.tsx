@@ -9,7 +9,11 @@ const Stack = createStackNavigator();
 export const Navigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+          cardStyle: {backgroundColor: 'white'},
+        }}>
         <Stack.Screen name="MainScreen" component={MainScreen} />
       </Stack.Navigator>
     </NavigationContainer>
