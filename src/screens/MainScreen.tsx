@@ -1,10 +1,16 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+
+import {Header} from '../components/Header';
 
 export const MainScreen = () => {
   return (
-    <View>
-      <Text>la lagrimas</Text>
+    <View style={styles.container}>
+      <Header />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {flex: 1},
+});
