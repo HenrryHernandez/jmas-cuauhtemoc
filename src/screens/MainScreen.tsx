@@ -1,12 +1,13 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
-import {Header} from '../components/index';
+import {Background, Header} from '../components/index';
 
 export const MainScreen = () => {
   return (
     <View style={styles.container}>
       <Header />
+      <Background />
     </View>
   );
 };
