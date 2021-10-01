@@ -3,7 +3,7 @@ import {Image, StyleSheet, View} from 'react-native';
 
 import {colors} from '../theme/appTheme';
 
-export const Header = () => {
+const Header = () => {
   return (
     <View style={styles.header}>
       <Image
@@ -18,3 +18,5 @@ const styles = StyleSheet.create({
   header: {backgroundColor: colors.mainColor, height: '18%'},
   image: {flex: 1},
 });
+
+export default Header;
