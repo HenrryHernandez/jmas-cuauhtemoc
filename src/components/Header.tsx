@@ -15,7 +15,7 @@ const Header = () => {
 };
 
 const styles = StyleSheet.create({
-  header: {backgroundColor: colors.mainColor, height: '18%'},
+  header: {backgroundColor: colors.mainColor, height: 142},
   image: {flex: 1},
 });
 
