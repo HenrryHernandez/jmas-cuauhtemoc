@@ -2,7 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {MainScreen} from '../screens/MainScreen';
+import {Tabs} from './Tabs';
 
 const Stack = createStackNavigator();
 
@@ -14,7 +14,7 @@ export const Navigator = () => {
           headerShown: false,
           cardStyle: {backgroundColor: 'white'},
         }}>
-        <Stack.Screen name="MainScreen" component={MainScreen} />
+        <Stack.Screen name="Tabs" component={Tabs} />
       </Stack.Navigator>
     </NavigationContainer>
   );
