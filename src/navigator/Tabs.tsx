@@ -8,7 +8,7 @@ const BottomTabAndroid = createMaterialBottomTabNavigator();
 
 export const Tabs = () => {
   return (
-    <BottomTabAndroid.Navigator barStyle={{backgroundColor: colors.mainColor}}>
+    <BottomTabAndroid.Navigator barStyle={{backgroundColor: colors.primary}}>
       <BottomTabAndroid.Screen name="MainScreen" component={MainScreen} />
     </BottomTabAndroid.Navigator>
   );
