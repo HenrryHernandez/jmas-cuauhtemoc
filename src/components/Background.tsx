@@ -15,7 +15,7 @@ const Background = () => {
 const styles = StyleSheet.create({
   background: {
     alignItems: 'center',
-    height: '72%',
+    height: '81%',
     justifyContent: 'center',
     marginTop: 142,
     opacity: 0.15,
