@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import {MainScreen} from '../screens/MainScreen';
 import {colors} from '../theme/appTheme';
+import {ClientSupportScreen} from '../screens/ClientSupportScreen';
 
 const BottomTabAndroid = createMaterialBottomTabNavigator();
 
@@ -19,12 +20,19 @@ export const Tabs = () => {
             case 'Inicio':
               iconName = 'home';
               break;
+            case 'Contáctanos':
+              iconName = 'headset';
+              break;
           }
 
           return <Icon name={iconName} size={20} color="white" />;
         },
       })}>
       <BottomTabAndroid.Screen name="Inicio" component={MainScreen} />
+      <BottomTabAndroid.Screen
+        name="Contáctanos"
+        component={ClientSupportScreen}
+      />
     </BottomTabAndroid.Navigator>
   );
 };
