@@ -2,9 +2,9 @@ import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import {MainScreen} from '../screens/MainScreen';
 import {colors} from '../theme/appTheme';
-import {ClientSupportScreen} from '../screens/ClientSupportScreen';
+
+import {ClientSupportScreen, MainScreen} from '../screens';
 
 const BottomTabAndroid = createMaterialBottomTabNavigator();
 

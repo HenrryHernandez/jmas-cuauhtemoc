@@ -3,7 +3,7 @@ import {StyleSheet, View} from 'react-native';
 
 import {Background, Header} from '../components/index';
 
-export const MainScreen = () => {
+const MainScreen = () => {
   return (
     <View style={styles.container}>
       <Header />
@@ -15,3 +15,5 @@ export const MainScreen = () => {
 const styles = StyleSheet.create({
   container: {flex: 1, backgroundColor: 'white'},
 });
+
+export default MainScreen;

@@ -3,7 +3,7 @@ import {View} from 'react-native';
 
 import {ClientSupportOption, Header} from '../components';
 
-export const ClientSupportScreen = () => {
+const ClientSupportScreen = () => {
   const call = () => {
     console.log('calling');
   };
@@ -31,3 +31,5 @@ export const ClientSupportScreen = () => {
     </View>
   );
 };
+
+export default ClientSupportScreen;
