@@ -1,42 +1,60 @@
 import React from 'react';
-import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
-
-import {colors} from '../theme/appTheme';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import {ClientSupportScreen, MainScreen, MapScreen} from '../screens';
 
-const BottomTabAndroid = createMaterialBottomTabNavigator();
+import {colors} from '../theme/appTheme';
+
+const TopTabs = createBottomTabNavigator();
 
 export const Tabs = () => {
   return (
-    <BottomTabAndroid.Navigator
-      barStyle={{backgroundColor: colors.primary}}
-      screenOptions={({route}) => ({
-        tabBarIcon: () => {
-          let iconName: string = '';
-
-          switch (route.name) {
-            case 'Inicio':
-              iconName = 'home';
-              break;
-            case 'Contáctanos':
-              iconName = 'headset';
-              break;
-            case 'Encuentranos':
-              iconName = 'location';
-              break;
-          }
-
-          return <Icon name={iconName} size={20} color="white" />;
+    <TopTabs.Navigator
+      sceneContainerStyle={{backgroundColor: 'white'}}
+      screenOptions={{
+        tabBarActiveTintColor: colors.secondary,
+        tabBarInactiveTintColor: 'white',
+        headerShown: false,
+        tabBarLabelStyle: {
+          marginBottom: 10,
         },
-      })}>
-      <BottomTabAndroid.Screen name="Inicio" component={MainScreen} />
-      <BottomTabAndroid.Screen
+        tabBarStyle: {
+          position: 'absolute',
+          backgroundColor: colors.primary,
+          borderWidth: 0,
+          elevation: 0,
+          height: 80,
+        },
+      }}>
+      <TopTabs.Screen
+        name="Inicio"
+        component={MainScreen}
+        options={{
+          tabBarLabel: 'Inicio',
+          tabBarIcon: ({color}) => <Icon color={color} size={25} name="home" />,
+        }}
+      />
+      <TopTabs.Screen
         name="Contáctanos"
         component={ClientSupportScreen}
+        options={{
+          tabBarLabel: 'Contáctanos',
+          tabBarIcon: ({color}) => (
+            <Icon color={color} size={25} name="headset" />
+          ),
+        }}
       />
-      <BottomTabAndroid.Screen name="Encuentranos" component={MapScreen} />
-    </BottomTabAndroid.Navigator>
+      <TopTabs.Screen
+        name="Encuentranos"
+        component={MapScreen}
+        options={{
+          tabBarLabel: 'Encuentranos',
+          tabBarIcon: ({color}) => (
+            <Icon color={color} size={25} name="location" />
+          ),
+        }}
+      />
+    </TopTabs.Navigator>
   );
 };
