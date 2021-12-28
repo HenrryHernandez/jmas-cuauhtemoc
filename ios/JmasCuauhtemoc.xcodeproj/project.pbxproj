@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		52F97FCC277A5A4D006FC571 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F97FCB277A5A4D006FC571 /* Ionicons.ttf */; };
 		6172F2D35A4C3AA820D92908 /* libPods-JmasCuauhtemoc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-JmasCuauhtemoc.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-JmasCuauhtemoc-JmasCuauhtemocTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-JmasCuauhtemoc-JmasCuauhtemocTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -37,6 +38,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = JmasCuauhtemoc/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = JmasCuauhtemoc/main.m; sourceTree = "<group>"; };
 		1D0AE47A65C8663E3B452821 /* Pods-JmasCuauhtemoc-JmasCuauhtemocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JmasCuauhtemoc-JmasCuauhtemocTests.release.xcconfig"; path = "Target Support Files/Pods-JmasCuauhtemoc-JmasCuauhtemocTests/Pods-JmasCuauhtemoc-JmasCuauhtemocTests.release.xcconfig"; sourceTree = "<group>"; };
+		52F97FCB277A5A4D006FC571 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
 		6423831EA8574132BED9D8CC /* libPods-JmasCuauhtemoc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JmasCuauhtemoc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-JmasCuauhtemoc-JmasCuauhtemocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JmasCuauhtemoc-JmasCuauhtemocTests.debug.xcconfig"; path = "Target Support Files/Pods-JmasCuauhtemoc-JmasCuauhtemocTests/Pods-JmasCuauhtemoc-JmasCuauhtemocTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = JmasCuauhtemoc/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		52F97FCA277A5A33006FC571 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				52F97FCB277A5A4D006FC571 /* Ionicons.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +126,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				52F97FCA277A5A33006FC571 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* JmasCuauhtemoc */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* JmasCuauhtemocTests */,
@@ -145,7 +156,6 @@
 				6C97AB639B58BBB4B15BBE30 /* Pods-JmasCuauhtemoc-JmasCuauhtemocTests.debug.xcconfig */,
 				1D0AE47A65C8663E3B452821 /* Pods-JmasCuauhtemoc-JmasCuauhtemocTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -245,6 +255,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				52F97FCC277A5A4D006FC571 /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
