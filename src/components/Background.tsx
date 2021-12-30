@@ -14,13 +14,11 @@ const Background = () => {
 
 const styles = StyleSheet.create({
   background: {
+    flex: 1,
     alignItems: 'center',
-    height: '81%',
     justifyContent: 'center',
-    marginTop: 142,
-    opacity: 0.15,
-    position: 'absolute',
-    width: '100%',
+    opacity: 0.1,
+    marginBottom: 80,
   },
   image: {height: '75%', width: '75%'},
 });
