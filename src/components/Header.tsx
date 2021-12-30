@@ -17,7 +17,7 @@ const Header = () => {
 const styles = StyleSheet.create({
   //height 18%
   header: {backgroundColor: colors.primary, height: 142},
-  image: {flex: 1},
+  image: {width: '100%'},
 });
 
 export default Header;
