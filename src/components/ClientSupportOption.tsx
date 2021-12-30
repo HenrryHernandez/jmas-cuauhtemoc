@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    marginBottom: 40,
   },
   text: {color: colors.secondary, fontSize: 32, fontWeight: '500'},
 });
