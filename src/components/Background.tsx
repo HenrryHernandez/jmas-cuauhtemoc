@@ -14,13 +14,20 @@ const Background = () => {
 
 const styles = StyleSheet.create({
   background: {
+    width: '100%',
+    height: '80%',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    opacity: 0.1,
-    marginBottom: 80,
+    position: 'absolute',
+    top: 142,
+    opacity: 0.08,
   },
-  image: {height: '75%', width: '75%'},
+  image: {
+    width: '95%',
+    height: '95%',
+    resizeMode: 'contain',
+  },
 });
 
 export default Background;
