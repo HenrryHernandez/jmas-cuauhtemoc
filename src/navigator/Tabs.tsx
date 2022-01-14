@@ -20,10 +20,7 @@ export const Tabs = () => {
           marginBottom: 10,
         },
         tabBarStyle: {
-          position: 'absolute',
           backgroundColor: colors.primary,
-          borderWidth: 0,
-          elevation: 0,
           height: 80,
         },
       }}>
