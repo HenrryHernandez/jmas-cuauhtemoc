@@ -6,6 +6,7 @@ import {
   FloatingButton,
   Header,
   OptionsModal,
+  SetNumberModal,
 } from '../components/index';
 
 import {colors} from '../theme/appTheme';
@@ -23,6 +24,7 @@ const MainScreen = () => {
       </View>
 
       <OptionsModal />
+      <SetNumberModal />
     </>
   );
 };
