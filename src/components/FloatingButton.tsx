@@ -1,14 +1,14 @@
-import React, {useRef} from 'react';
+import React, {useContext, useRef} from 'react';
 import {Animated, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import {ModalsContext} from '../contexts';
+
 import {colors} from '../theme/appTheme';
 
-interface Props {
-  openModal: () => void;
-}
+const FloatingButton = () => {
+  const {openModal} = useContext(ModalsContext);
 
-const FloatingButton = ({openModal}: Props) => {
   const scale = useRef(new Animated.Value(1)).current;
 
   const onPressIn = () => {

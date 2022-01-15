@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
   Modal,
   StyleSheet,
@@ -9,12 +9,11 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-interface Props {
-  modalVisible: boolean;
-  closeModal: () => void;
-}
+import {ModalsContext} from '../contexts';
 
-const OptionsModal = ({modalVisible, closeModal}: Props) => {
+const OptionsModal = () => {
+  const {modalVisible, closeModal} = useContext(ModalsContext);
+
   return (
     <View>
       <Modal transparent={true} visible={modalVisible}>

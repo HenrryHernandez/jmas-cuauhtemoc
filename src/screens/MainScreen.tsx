@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
 import {
@@ -11,28 +11,18 @@ import {
 import {colors} from '../theme/appTheme';
 
 const MainScreen = () => {
-  const [modalVisible, setModalVisible] = useState(false);
-
-  const openModal = () => {
-    setModalVisible(true);
-  };
-
-  const closeModal = () => {
-    setModalVisible(false);
-  };
-
   return (
     <>
       <View style={styles.container}>
         <Header />
         <Background />
         <View style={styles.buttonContainer}>
-          <FloatingButton openModal={openModal} />
+          <FloatingButton />
           <Text style={styles.buttonText}>PAGAR</Text>
         </View>
       </View>
 
-      <OptionsModal modalVisible={modalVisible} closeModal={closeModal} />
+      <OptionsModal />
     </>
   );
 };
