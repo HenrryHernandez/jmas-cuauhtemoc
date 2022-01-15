@@ -4,7 +4,11 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import {colors} from '../theme/appTheme';
 
-const FloatingButton = () => {
+interface Props {
+  openModal: () => void;
+}
+
+const FloatingButton = ({openModal}: Props) => {
   const scale = useRef(new Animated.Value(1)).current;
 
   const onPressIn = () => {
@@ -13,6 +17,8 @@ const FloatingButton = () => {
       duration: 200,
       useNativeDriver: true,
     }).start();
+
+    openModal();
   };
 
   const onPressOut = () => {
