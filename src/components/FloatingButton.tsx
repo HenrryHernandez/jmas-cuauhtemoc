@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     alignItems: 'center',
     justifyContent: 'center',
-    height: 100,
-    width: 100,
+    height: 85,
+    width: 85,
     borderRadius: 100,
   },
 });
