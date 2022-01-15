@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import {ModalsContext} from '../contexts';
 
 const OptionsModal = () => {
-  const {modalVisible, closeModal} = useContext(ModalsContext);
+  const {modalVisible, closeModal, openModal2} = useContext(ModalsContext);
 
   return (
     <View>
@@ -31,6 +31,10 @@ const OptionsModal = () => {
               <TouchableOpacity
                 style={{
                   height: 70,
+                }}
+                onPress={() => {
+                  openModal2();
+                  closeModal();
                 }}>
                 <View style={styles.optionContainer}>
                   <Icon name="create-sharp" size={20} color="black" />
