@@ -4,7 +4,11 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {Tabs} from './Tabs';
 
-const Stack = createStackNavigator();
+export type StackScreensParams = {
+  Tabs: undefined;
+};
+
+const Stack = createStackNavigator<StackScreensParams>();
 
 export const Navigator = () => {
   return (
