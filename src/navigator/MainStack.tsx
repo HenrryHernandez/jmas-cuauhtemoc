@@ -3,12 +3,12 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {MainScreen, UserInformationScreen} from '../screens';
 
-export type StackScreensParams = {
+export type MainStackParams = {
   MainScreen: undefined;
-  UserInformationScreen: undefined;
+  UserInformationScreen: {accountNumber: string};
 };
 
-const Stack = createStackNavigator<StackScreensParams>();
+const Stack = createStackNavigator<MainStackParams>();
 
 const MainStack = () => {
   return (
