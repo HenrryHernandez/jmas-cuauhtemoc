@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {
   Modal,
   StyleSheet,
@@ -8,11 +8,16 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 import {ModalsContext} from '../contexts';
 
 const SetNumberModal = () => {
   const {modalVisible2, closeModal2} = useContext(ModalsContext);
+
+  const navigation = useNavigation();
+
+  const [accountNumber, setAccountNumber] = useState('');
 
   return (
     <View>
@@ -29,13 +34,23 @@ const SetNumberModal = () => {
                 <TextInput
                   style={styles.textInput}
                   placeholder="Número de contrato..."
+                  value={accountNumber}
+                  onChangeText={setAccountNumber}
                 />
               </View>
               <View style={styles.buttonsContainer}>
-                <TouchableOpacity style={{marginRight: 10}}>
+                <TouchableOpacity
+                  style={{marginRight: 10}}
+                  onPress={closeModal2}>
                   <Text style={{fontWeight: '500'}}>CANCELAR</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    closeModal2();
+                    navigation.navigate('UserInformationScreen', {
+                      accountNumber: accountNumber,
+                    });
+                  }}>
                   <Text style={{fontWeight: '500'}}>CONFIRMAR</Text>
                 </TouchableOpacity>
               </View>
