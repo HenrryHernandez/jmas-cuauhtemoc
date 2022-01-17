@@ -2,11 +2,19 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import {ClientSupportScreen, MainScreen, MapScreen} from '../screens';
+import MainStack from './MainStack';
+
+import {ClientSupportScreen, MapScreen} from '../screens';
 
 import {colors} from '../theme/appTheme';
 
-const TopTabs = createBottomTabNavigator();
+export type TabsScreensParams = {
+  Inicio: undefined;
+  Contactanos: undefined;
+  Encuentranos: undefined;
+};
+
+const TopTabs = createBottomTabNavigator<TabsScreensParams>();
 
 export const Tabs = () => {
   return (
@@ -26,14 +34,14 @@ export const Tabs = () => {
       }}>
       <TopTabs.Screen
         name="Inicio"
-        component={MainScreen}
+        component={MainStack}
         options={{
           tabBarLabel: 'Inicio',
           tabBarIcon: ({color}) => <Icon color={color} size={25} name="home" />,
         }}
       />
       <TopTabs.Screen
-        name="Contáctanos"
+        name="Contactanos"
         component={ClientSupportScreen}
         options={{
           tabBarLabel: 'Contáctanos',
