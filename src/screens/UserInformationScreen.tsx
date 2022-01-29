@@ -2,10 +2,10 @@ import React from 'react';
 import {Text, View} from 'react-native';
 import {StackScreenProps} from '@react-navigation/stack';
 
-import {MainStackParams} from '../navigator/MainStack';
+import {StackScreensParams} from './../navigator/navigator';
 
 interface Props
-  extends StackScreenProps<MainStackParams, 'UserInformationScreen'> {}
+  extends StackScreenProps<StackScreensParams, 'UserInformationScreen'> {}
 
 const UserInformationScreen = ({route}: Props) => {
   const {accountNumber} = route.params;

@@ -2,9 +2,7 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import MainStack from './MainStack';
-
-import {ClientSupportScreen, MapScreen} from '../screens';
+import {ClientSupportScreen, MainScreen, MapScreen} from '../screens';
 
 import {colors} from '../theme/appTheme';
 
@@ -34,7 +32,7 @@ export const Tabs = () => {
       }}>
       <TopTabs.Screen
         name="Inicio"
-        component={MainStack}
+        component={MainScreen}
         options={{
           tabBarLabel: 'Inicio',
           tabBarIcon: ({color}) => <Icon color={color} size={25} name="home" />,
