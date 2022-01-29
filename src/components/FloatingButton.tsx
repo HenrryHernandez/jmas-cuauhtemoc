@@ -14,7 +14,7 @@ const FloatingButton = () => {
   const onPressIn = () => {
     Animated.timing(scale, {
       toValue: 1.1,
-      duration: 200,
+      duration: 1,
       useNativeDriver: true,
     }).start();
 
@@ -24,7 +24,7 @@ const FloatingButton = () => {
   const onPressOut = () => {
     Animated.timing(scale, {
       toValue: 1,
-      duration: 300,
+      duration: 200,
       useNativeDriver: true,
     }).start();
   };
